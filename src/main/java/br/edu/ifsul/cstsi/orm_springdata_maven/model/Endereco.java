@@ -7,7 +7,7 @@ public class Endereco {
     private String logradouro;
     private String bairro;
     private String cep;
-    private String cidadee;
+    private String cidade;
     private String uf;
     private String numero;
     private String complemento;
@@ -19,7 +19,7 @@ public class Endereco {
         this.logradouro = logradouro;
         this.bairro = bairro;
         this.cep = cep;
-        this.cidadee = cidade;
+        this.cidade = cidade;
         this.uf = uf;
         this.numero = numero;
         this.complemento = complemento;
@@ -50,11 +50,11 @@ public class Endereco {
     }
 
     public String getCidade() {
-        return cidadee;
+        return cidade;
     }
 
     public void setCidade(String cidade) {
-        this.cidadee = cidade;
+        this.cidade = cidade;
     }
 
     public String getUf() {
@@ -87,7 +87,7 @@ public class Endereco {
                 "logradouro='" + logradouro + '\'' +
                 ", bairro='" + bairro + '\'' +
                 ", cep='" + cep + '\'' +
-                ", cidade='" + cidadee + '\'' +
+                ", cidade='" + cidade + '\'' +
                 ", uf='" + uf + '\'' +
                 ", numero='" + numero + '\'' +
                 ", complemento='" + complemento + '\'' +

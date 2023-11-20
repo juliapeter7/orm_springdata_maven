@@ -2,8 +2,8 @@ package br.edu.ifsul.cstsi.orm_springdata_maven.model;
 
 import jakarta.persistence.*;
 
-import java.sql.Time;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 @Entity(name = "Leilao")
@@ -12,10 +12,10 @@ public class Leilao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date dt_inicio;
-    private Time hor_inicio;
-    private Date dt_final;
-    private Time hor_final;
+    private LocalDate dt_inicio;
+    private LocalTime hor_inicio;
+    private LocalDate dt_final;
+    private LocalTime hor_final;
 
     //relacao leilao-itens
     @OneToMany(mappedBy = "leilao")
@@ -39,7 +39,8 @@ public class Leilao {
     public Leilao() {
     }
 
-    public Leilao(Long id, Date dt_inicio, Time hor_inicio, Date dt_final, Time hor_final, List<Item_Leilao> itens_leilao) {
+    public Leilao(Long id, LocalDate dt_inicio, LocalTime hor_inicio, LocalDate dt_final, LocalTime hor_final,
+                  List<Item_Leilao> itens_leilao) {
         this.id = id;
         this.dt_inicio = dt_inicio;
         this.hor_inicio = hor_inicio;
@@ -56,35 +57,35 @@ public class Leilao {
         this.id = id;
     }
 
-    public Date getDt_inicio() {
+    public LocalDate getDt_inicio() {
         return dt_inicio;
     }
 
-    public void setDt_inicio(Date dt_inicio) {
+    public void setDt_inicio(LocalDate dt_inicio) {
         this.dt_inicio = dt_inicio;
     }
 
-    public Time getHor_inicio() {
+    public LocalTime getHor_inicio() {
         return hor_inicio;
     }
 
-    public void setHor_inicio(Time hor_inicio) {
+    public void setHor_inicio(LocalTime hor_inicio) {
         this.hor_inicio = hor_inicio;
     }
 
-    public Date getDt_final() {
+    public LocalDate getDt_final() {
         return dt_final;
     }
 
-    public void setDt_final(Date dt_final) {
+    public void setDt_final(LocalDate dt_final) {
         this.dt_final = dt_final;
     }
 
-    public Time getHor_final() {
+    public LocalTime getHor_final() {
         return hor_final;
     }
 
-    public void setHor_final(Time hor_final) {
+    public void setHor_final(LocalTime hor_final) {
         this.hor_final = hor_final;
     }
 

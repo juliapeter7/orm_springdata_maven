@@ -2,7 +2,7 @@ package br.edu.ifsul.cstsi.orm_springdata_maven.model;
 
 import jakarta.persistence.*;
 
-import java.sql.Time;
+import java.time.LocalTime;
 
 @Entity (name = "Lance")
 @Table(name = "lances")
@@ -11,7 +11,8 @@ public class Lance {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double val_lance;
-    private Time hora_lance;
+    private LocalTime hora_lance;
+
     //relacao lance-participante
     @ManyToOne
     @JoinColumn(name = "participante_id", referencedColumnName = "id")
@@ -24,21 +25,17 @@ public class Lance {
 
     //----
 
-    public int regLance(double val_lance, Time hora_lance){
+    public int regLance(double val_lance, LocalTime hora_lance){
         System.out.println("Lance registrado!");
         return 0;
     }
 
-
-
-
     //----
-
 
     public Lance() {
     }
 
-    public Lance(Long id, double val_lance, Time hora_lance, Participante participante, Item_Leilao itemLeilao) {
+    public Lance(Long id, double val_lance, LocalTime hora_lance, Participante participante, Item_Leilao itemLeilao) {
         this.id = id;
         this.val_lance = val_lance;
         this.hora_lance = hora_lance;
@@ -62,11 +59,11 @@ public class Lance {
         this.val_lance = val_lance;
     }
 
-    public Time getHora_lance() {
+    public LocalTime getHora_lance() {
         return hora_lance;
     }
 
-    public void setHora_lance(Time hora_lance) {
+    public void setHora_lance(LocalTime hora_lance) {
         this.hora_lance = hora_lance;
     }
 

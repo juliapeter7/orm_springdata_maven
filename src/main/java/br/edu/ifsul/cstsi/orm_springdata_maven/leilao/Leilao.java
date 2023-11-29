@@ -1,6 +1,6 @@
-package br.edu.ifsul.cstsi.orm_springdata_maven.model.leilao;
+package br.edu.ifsul.cstsi.orm_springdata_maven.leilao;
 
-import br.edu.ifsul.cstsi.orm_springdata_maven.model.item_leilao.Item_Leilao;
+import br.edu.ifsul.cstsi.orm_springdata_maven.item_leilao.Item_Leilao;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

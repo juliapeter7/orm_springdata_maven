@@ -1,7 +1,7 @@
 package br.edu.ifsul.cstsi.orm_springdata_maven.model.participante;
 
-import br.edu.ifsul.cstsi.orm_springdata_maven.model.endereco.Endereco;
-import br.edu.ifsul.cstsi.orm_springdata_maven.model.lance.Lance;
+import br.edu.ifsul.cstsi.orm_springdata_maven.endereco.Endereco;
+import br.edu.ifsul.cstsi.orm_springdata_maven.lance.Lance;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

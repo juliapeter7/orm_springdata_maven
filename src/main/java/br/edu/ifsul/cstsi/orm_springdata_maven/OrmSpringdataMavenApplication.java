@@ -8,6 +8,7 @@ public class OrmSpringdataMavenApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OrmSpringdataMavenApplication.class, args);
+		HomeController.main(null);
 	}
 
 }

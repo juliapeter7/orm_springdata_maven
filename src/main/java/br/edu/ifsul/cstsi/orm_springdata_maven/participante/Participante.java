@@ -1,6 +1,5 @@
-package br.edu.ifsul.cstsi.orm_springdata_maven.model.participante;
+package br.edu.ifsul.cstsi.orm_springdata_maven.participante;
 
-import br.edu.ifsul.cstsi.orm_springdata_maven.endereco.Endereco;
 import br.edu.ifsul.cstsi.orm_springdata_maven.lance.Lance;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,10 +22,8 @@ public class Participante {
     private String email;
     private String telefone;
     //relacao participante-lance
-    @OneToMany(mappedBy = "participante")
-    private List<Lance> lances;
-    @Embedded
-    private Endereco endereco;
+//    @OneToMany(mappedBy = "participante")
+//    private List<Lance> lances;
 
     // ----
     public int login (String login, String senha){
@@ -34,8 +31,19 @@ public class Participante {
         return 0;
     }
 
-    public int regPar (String nome, String login, String senha, String email, Endereco endereco, String telefone){
+    public int regPar (String nome, String login, String senha, String email, String telefone){
         System.out.println("Participante registrado com sucesso!");
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Participante:" +
+                "Id: " + id +
+                "\n Nome: " + nome + '\'' +
+                "\n Login: " + login + '\'' +
+                "\n Senha: " + senha + '\'' +
+                "\n Email: " + email + '\'' +
+                "\n Telefone: " + telefone + '\'' + "\n";
     }
 }

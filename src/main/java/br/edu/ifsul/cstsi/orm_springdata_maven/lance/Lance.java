@@ -1,7 +1,7 @@
 package br.edu.ifsul.cstsi.orm_springdata_maven.lance;
 
 import br.edu.ifsul.cstsi.orm_springdata_maven.item_leilao.Item_Leilao;
-import br.edu.ifsul.cstsi.orm_springdata_maven.model.participante.Participante;
+import br.edu.ifsul.cstsi.orm_springdata_maven.participante.Participante;
 import jakarta.persistence.*;
 
 import java.time.LocalTime;

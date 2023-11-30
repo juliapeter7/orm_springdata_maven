@@ -15,8 +15,7 @@ public class Item_Leilao {
     private String titulo_item;
     private String descricao_item;
     private double lance_minimo;
-    private String caminho_foto;
-    private int arrematado;
+    private boolean arrematado;
 
     //relacao item_leilao-lance
     @OneToMany(mappedBy = "itemLeilao")

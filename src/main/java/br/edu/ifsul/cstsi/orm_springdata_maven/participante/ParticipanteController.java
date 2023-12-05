@@ -28,7 +28,7 @@ public class ParticipanteController {
                     2. Atualizar um participante
                     3. Excluir um participante (tornar inativo)
                     4. Listar todos os participantes
-                    5. Buscar participante pelo código3
+                    5. Buscar participante pelo código
                     Opção (Zero p/sair):\s""");
             opcao = input.nextInt();
             input.nextLine();
